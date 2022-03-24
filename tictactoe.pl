@@ -41,9 +41,6 @@ done :- all_full, write('Draw'), nl, close.
 
 close :- sleep(10), halt.
 
-%reset :- retract(computer(_)), retract(player(_)), retract(player_side(_)).
-
-
 print_square(N) :- player(N), player_side(1), write('| x |').
 print_square(N) :- player(N), player_side(2), write('| o |').
 print_square(N) :- computer(N), player_side(2), write('| x |').
